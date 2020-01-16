@@ -29,7 +29,7 @@ public class NoticeUtil {
 
     public static void send(String from, String[] to, String subject, String msg) throws IOException, MessagingException {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-        mailSender.setHost("ems.bugs.co.kr");
+        mailSender.setHost("host");
 
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED, StandardCharsets.UTF_8.name());
